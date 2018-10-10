@@ -15,6 +15,7 @@ class ShoppingListController extends Controller
     public function index()
     {
         //
+        return ShoppingList::all();
     }
 
     /**
