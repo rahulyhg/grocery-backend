@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ShoppingListController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('cors');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -37,6 +42,7 @@ class ShoppingListController extends Controller
     public function store(Request $request)
     {
         //
+        return ShoppingList::create($request->all());
     }
 
     /**
